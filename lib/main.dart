@@ -1,19 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:karibucheck/newguest.dart';
-import 'package:karibucheck/userslist.dart';
 
-import 'guest.dart';
-
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  home: MyApp(),
-  routes: {
-    "/guest": (context) => guest(),
-    "/userslist": (context) => userslist(),
-    "/newguest": (context) => newguest(),
-
-  },
-));
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,89 +10,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: new BoxDecoration(
-                gradient: new LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    Colors.white,
-                    Colors.blueAccent
-                  ],
-                )),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 6,
-                child:Container()
-              ),
-              Expanded(
-                flex: 3,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 80,
-                      width: double.infinity,
-                      padding: const EdgeInsets.only(top: 25, left: 24, right: 24),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed("/newguest");
-                        },
-                        //elevation: 0,
-                        // style: RoundedRectangleBorder(
-                        //     borderRadius: BorderRadius.circular(25),
-                        // ),
-                        //color: Colors.indigo,
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.teal)
-                        ),
-                        child: Text(
-                          'Create Guest',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 80,
-                      width: double.infinity,
-                      padding: const EdgeInsets.only(top: 25, left: 24, right: 24),
-                      child: ElevatedButton(
-                        // elevation: 0,
-                        // shape: RoundedRectangleBorder(
-                        //     borderRadius: BorderRadius.circular(25),
-                        // ),
-                        // color: Colors.white,
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.teal)
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).pushNamed("/userslist");
-                        },
-                        child: Text(
-                          'Guest List',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ],
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // TRY THIS: Try running your application with "flutter run". You'll see
+        // the application has a purple toolbar. Then, without quitting the app,
+        // try changing the seedColor in the colorScheme below to Colors.green
+        // and then invoke "hot reload" (save your changes or press the "hot
+        // reload" button in a Flutter-supported IDE, or press "r" if you used
+        // the command line to start the app).
+        //
+        // Notice that the counter didn't reset back to zero; the application
+        // state is not lost during the reload. To reset the state, use hot
+        // restart instead.
+        //
+        // This works for code too, not just values: Most code changes can be
+        // tested with just a hot reload.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
