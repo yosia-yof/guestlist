@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:karibucheck/connection.dart';
+import 'package:karibucheck/editGuest.dart';
 import 'package:karibucheck/newguest.dart';
 import 'package:karibucheck/userslist.dart';
 
@@ -11,6 +13,8 @@ void main() => runApp(MaterialApp(
     "/guest": (context) => guest(),
     "/userslist": (context) => userslist(),
     "/newguest": (context) => newguest(),
+    "/editGuest": (context) => editGuest(),
+
 
   },
 ));
