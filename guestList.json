@@ -6,6 +6,7 @@
             "email" : "obeidyof@gmail.com",
             "type" : "family",
             "guestID" : 12,
+            "numOfGuest" : 2,
             "check" : false
         },
 
@@ -15,6 +16,7 @@
             "email" : "deniro@gmail.com",
             "type" : "staff",
             "guestID" : 6,
+            "numOfGuest" : 4,
             "check" : false
         },
 
@@ -24,6 +26,7 @@
             "email" : "asyamtwale@gmail.com",
             "type" : "guest",
             "guestID" : 22,
+            "numOfGuest" : 3,
             "check" : false
         }
 
