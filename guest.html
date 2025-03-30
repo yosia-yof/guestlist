@@ -31,7 +31,8 @@
         async function fetchGuestData() {
             const guestID = getGuestIDFromURL();  // Get guestID from URL query string
             const response = await fetch('https://raw.githubusercontent.com/your-username/your-repository/main/guests.json');
-            const guests = await response.json();
+            const data = await response.json();
+            const guests = data.guests;  // Access the 'guests' array
             
             // Find the guest with the specified guestID
             const guest = guests.find(g => g.guestID == guestID);
@@ -42,8 +43,11 @@
                 guestInfoDiv.innerHTML = `
                     <h2>Guest Information</h2>
                     <p><strong>Name:</strong> ${guest.name}</p>
-                    <p><strong>Guest Type:</strong> ${guest.guestType}</p>
-                    <p><strong>Allowed to Bring:</strong> ${guest.allowedToBring}</p>
+                    <p><strong>Phone:</strong> ${guest.phone}</p>
+                    <p><strong>Email:</strong> ${guest.email}</p>
+                    <p><strong>Guest Type:</strong> ${guest.type}</p>
+                    <p><strong>Number of Guests:</strong> ${guest.numOfGuest}</p>
+                    <p><strong>Checked-in:</strong> ${guest.check ? 'Yes' : 'No'}</p>
                 `;
             } else {
                 guestInfoDiv.innerHTML = `<p>No guest found with ID: ${guestID}</p>`;
