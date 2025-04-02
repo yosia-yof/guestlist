@@ -1,1 +1,4 @@
-{"guests":{"name":"Dara Julius","phone":"0653100876","type":"Staff","guestID":"17436164688924755","numOfGuest":1,"check":true}}
+{"guests":[
+  {"name":"Dara Julius","phone":"0653100876","type":"Staff","guestID":"17436164688924755","numOfGuest":1,"check":true},
+  {"name":"rob stark","phone":"0653103676","type":"Staff","guestID":"17436164688924755","numOfGuest":1,"check":true}
+]}
