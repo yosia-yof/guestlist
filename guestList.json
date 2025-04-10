@@ -1,1 +1,1 @@
-{"guests":[],"groups":[{"groupName":"guest","numOfGuests":1},{"groupName":"wageni","numOfGuests":198}]}
+{"guests":[{"name":"yosia fabian","phone":"2532","type":"wageni","guestID":"cb852a20-15f8-11f0-b86a-59c9735dc551","numOfGuest":23,"check":false}],"groups":[{"groupName":"guest","numOfGuests":1},{"groupName":"wageni","numOfGuests":175}]}
